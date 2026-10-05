@@ -8,7 +8,7 @@ Muốn nhận việc: điền tên vào cột **Người làm**, đổi ⬜ → 
 
 | # | Việc | Người làm | Trạng thái | Kết quả / ghi chú |
 |---|---|---|---|---|
-| 1 | Tìm code bài báo, clone, cài môi trường | Bảo | ✅ | Code gốc + model của tác giả trong repo |
+| 1 | Clone, cài môi trường | Bảo | ✅ | Code gốc + model của tác giả trong repo |
 | 2 | Sửa lỗi tương thích torch ≥ 2.6 (`torch.load`) | Bảo | ✅ | 2 dòng, xem commit "Fix torch.load…" |
 | 3 | Test model gốc của tác giả trên cả năm test | Bảo | ✅ | DQN 1000.26 vs bài báo 976 — [ket_qua.md](ket_qua/ket_qua.md) mục 1–2 |
 | 4 | Lấy số liệu chính xác Fig. 3/4 trong bài báo | Bảo | ✅ | [ket_qua.md](ket_qua/ket_qua.md) mục 2 |
