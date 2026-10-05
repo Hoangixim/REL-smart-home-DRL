@@ -1,0 +1,15 @@
+False
+cpu
+YOU HAVE INITIALISED YOUR HEMS (Home Energy Management System) WITH FOLLOWING SPECIFICATIONS:
+Battery size: 20 kWh
+Max input/output energy per step: 1 kWh
+Battery efficiency: 95%
+Energy selling price is set to 0.5 * dataset market price
+Energy buying price is set to 2 * dataset market price
+Dataset was loaded from: saved_nets/rtp_20_10_90_2_2
+--- TESTING ---
+D:\project\REL_Project\smart-home-energy-trading-with-DRL\HEMS.py:298: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  fig.show()
+Episode:Testing episode: saved_nets/rtp_20_10_90_2_2 | Epsilon: 0.02 | DQN cost:-1000.26 | compare cost:-1176.15 | Gain over compare: 175.89( 14.95% )
+RAW results [sRL, baseline1_alt, baseline2_nobatt, no_pv_no_batt]: [np.float64(-1000.2627669544702), np.float64(-1176.15407350201), np.float64(-1250.8387008943394), np.float64(1973.542247472384)]
+ELAPSED 84s

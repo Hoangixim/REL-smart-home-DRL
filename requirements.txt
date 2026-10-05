@@ -1,0 +1,8 @@
+# Phiên bản đã chạy được (Python 3.13). torch bản CPU là đủ:
+#   pip install torch==2.9.0 --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+torch==2.9.0
+numpy==2.2.0
+pandas==2.2.3
+matplotlib==3.10.1
+tqdm==4.67.1
