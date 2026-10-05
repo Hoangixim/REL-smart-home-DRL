@@ -1,0 +1,24 @@
+# Claude Code — tài liệu/cấu hình riêng của máy, không chia sẻ
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+
+# Bài báo (bản quyền ACM) — tải qua DOI trong README
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Model tự train (~90MB mỗi cái) — tái tạo bằng ket_qua/run_train.py + seed
+# Chỉ giữ model gốc của tác giả
+smart-home-energy-trading-with-DRL/saved_nets/*
+!smart-home-energy-trading-with-DRL/saved_nets/rtp_20_10_90_2_2/
+
+# File tạm / hệ điều hành
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+.env
