@@ -124,7 +124,7 @@ class DQN(object):
         self.memory_counter = d['memory_counter']
         self.memory = np.array(d['memory'])
         
-        self.eval_net = torch.load(path + '/eval_net.pt', map_location=torch.device('cpu')).to(device)
-        self.target_net = torch.load(path + '/target_net.pt', map_location=torch.device('cpu')).to(device)
+        self.eval_net = torch.load(path + '/eval_net.pt', map_location=torch.device('cpu'), weights_only=False).to(device)
+        self.target_net = torch.load(path + '/target_net.pt', map_location=torch.device('cpu'), weights_only=False).to(device)
         self.eval_net.eval()
         self.target_net.eval()
