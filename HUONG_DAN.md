@@ -1,4 +1,4 @@
-# Hướng dẫn đồ án REL: hiểu bài báo và chạy lại code
+# Hướng dẫn REL: hiểu bài báo và chạy lại code
 
 > Bài báo: **Pokorn et al., "Smart Home Energy Cost Minimisation Using Energy Trading with Deep Reinforcement Learning"**, BuildSys '23 (5 trang).
 > Code: thư mục [smart-home-energy-trading-with-DRL/](smart-home-energy-trading-with-DRL/), gồm 3 file Python, tổng khoảng 800 dòng.
