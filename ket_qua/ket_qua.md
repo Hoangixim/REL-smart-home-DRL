@@ -110,3 +110,44 @@ Script: `run_train.py` (train 200 episode → lưu → test full năm → lưu b
 5. Run tốt nhất 6 kW (994.32) vẫn **còn xa 730 € của bài báo** (−11.8% vs −35.2% so với xoay vòng). Model có sẵn 4 kW (1000.26) thì gần cột 976 € của bài. ⇒ Tái hiện được **xu hướng** (DQN thắng baseline khi train thành công) nhưng **không tái hiện được con số tốt nhất** chỉ với 6 lần thử mỗi cấu hình.
 
 Biểu đồ: `run_*.png` (vd. `run_6kw_s2.png` — run tốt nhất, pin dao động 10–19 kWh; `run_4kw_1.png` — run chết, pin luôn ~0). Log: `run_*.log`.
+
+## 4. Train bổ sung seed 5–12 cho cấu hình 6 kW
+
+Cấu hình chung: pin 20 kWh, hiệu suất 95%, giá RTP, `price_coefs=[2, 0.5]`, `max_en=1.5`. Mỗi run huấn luyện 200 episode và đánh giá trên toàn bộ năm kiểm thử (29 844 bước).
+
+### Kết quả (DQN Result, Baseline và Gain)
+
+| Run | Seed | DQN Result | Baseline | Gain | Gain (%) |
+|---|---:|---:|---:|---:|---:|
+| phase2_seed5_6kw | 5 | -1260.58 | -1127.32 | -133.25 | -11.82% |
+| phase2_seed6_6kw | 6 | -1241.61 | -1127.32 | -114.29 | -10.14% |
+| phase2_seed7_6kw | 7 | -1221.64 | -1127.32 | -94.32 | -8.37% |
+| phase2_seed8_6kw | 8 | -980.60 | -1127.32 | +146.72 | +13.01% |
+| phase2_seed9_6kw | 9 | -1221.64 | -1127.32 | -94.32 | -8.37% |
+| phase2_seed10_6kw | 10 | -1249.12 | -1127.32 | -121.79 | -10.80% |
+| phase2_seed11_6kw | 11 | -1204.14 | -1127.32 | -76.82 | -6.81% |
+| phase2_seed12_6kw | 12 | -1227.81 | -1127.32 | -100.49 | -8.91% |
+
+### Thống kê và nhận xét
+
+- 8 run được thực hiện với seed từ 5 đến 12.
+- Chỉ 1/8 run (12,5%) tốt hơn Baseline: `phase2_seed8_6kw`, Gain = +13,01%.
+- Gain trung bình của 8 run: khoảng -6,53%.
+- Run tốt nhất: seed 8, DQN Result = -980,60.
+- Run kém nhất theo Gain: seed 5, Gain = -11,82%.
+
+Kết quả cho thấy hiệu suất DQN chưa ổn định giữa các seed. Phần lớn run chưa vượt Baseline, do đó cần tiếp tục phân tích hành vi chọn action và quá trình học để tìm nguyên nhân.
+
+Mục tiêu tìm kết quả gần 730 € chưa đạt được trong nhóm run này. Giá trị DQN Result tốt nhất là -980,60 theo cách chương trình ghi nhận; không nên coi đây là chi phí dương 980,60 € nếu chưa đối chiếu quy ước dấu của chương trình.
+
+### File kết quả
+
+- Bảng CSV: `phase2_item7_results.csv`
+- Bảng Excel: `phase2_item7_results.xlsx`
+- Biểu đồ: `phase2_seed5_6kw.png` đến `phase2_seed12_6kw.png`
+
+### Công thức
+
+- `Gain = Baseline - DQN Result`
+- `Gain (%) = Gain / abs(Baseline) × 100`
+
