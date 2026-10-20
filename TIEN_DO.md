@@ -14,7 +14,7 @@ Muốn nhận việc: điền tên vào cột **Người làm**, đổi ⬜ → 
 | 4 | Lấy số liệu chính xác Fig. 3/4 trong bài báo | Bảo | ✅ | [ket_qua.md](ket_qua/ket_qua.md) mục 2 |
 | 5 | Train lại 12 lần (4 kW, 6 kW) + chẩn đoán | Bảo | ✅ | Chỉ 2/12 run thắng baseline, nguyên nhân dying ReLU — [ket_qua.md](ket_qua/ket_qua.md) mục 3 |
 | 6 | Đọc hiểu bài báo + code, ghi chỗ lệch | Bảo | ✅ | [HUONG_DAN.md](HUONG_DAN.md) Phần 3–4 |
-| 7 | Train thêm seed 5–12 cho cấu hình 6 kW, tìm run gần 730 € | | ⬜ | `python ../ket_qua/run_train.py run_6kw_s5 1.5 5` |
+| 7 | Train thêm seed 5–12 cho cấu hình 6 kW, tìm run gần 730 € | Hoàng | ✅ | Đã chạy seed 5–12; kết quả và biểu đồ tại ket_qua.md mục 4. Mục tiêu gần 730 € chưa đạt. |
 | 8 | Chạy giá TOU (`data/tou2.csv`), so với Fig. 4 | | ⬜ | Cần thêm tham số `data_path` vào `run_train.py` |
 | 9 | Chạy cấu hình pin khác (10 kWh; hiệu suất 80%, 90%) | | ⬜ | So với các cột còn lại của Fig. 3 |
 | 10 | Báo cáo — phần giới thiệu bài toán + mô hình MDP (state/action/reward) | | ⬜ | Nguồn: HUONG_DAN Phần 1–3 |
